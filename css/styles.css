@@ -255,6 +255,7 @@ transform: translate(-50%, -50%) scale(0.9);
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input-desc{
 display: block;
@@ -274,8 +275,57 @@ resize: none;
 padding: 8px 16px;
 width: 100%;
 height: 120px;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-form-massage:focus{
+outline: none;
+border-color: rgba(77, 90, 229, 1);
+}
+/*=========== modal icon=========== */
+.modal-form-input-wrapper{
+  position:relative;
 
+}
+.modal-form-input-icon{
+  position: absolute; 
+  display: block;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus{
+  outline: none;
+  border-color: rgba(77, 90, 229, 1);
+}
+.modal-form-input:focus + .modal-form-input-icon{
+  fill:var(--primery-band-color);
+}
+.modal-form-check-deck::before{
+  content: '';
+  display: block;
+  border: solid 1.25px rgba(46, 47, 66, 1);
+  border-radius: 2px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+.modal-form-check:checked + .modal-form-check-deck::before {
+ 
+  background-color: rgba(77, 90, 229, 1);
+  background-image:url(../images/Vector.svg);
+  border: 1.25px solid #4D5AE5;
+  
+}
+.modal-form-check:focus + .modal-form-check-deck::before{
+  background-color: rgba(77, 90, 229, 1);
+  background-image:url(../images/Vector.svg);
+  border: 1.25px solid #4D5AE5;
+
+}
 /*--------------- main --------------*/
 .section{
    
