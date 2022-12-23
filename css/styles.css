@@ -300,6 +300,25 @@ border-color: rgba(77, 90, 229, 1);
 }
 .modal-form-input:focus + .modal-form-input-icon{
   fill:var(--primery-band-color);
+
+}
+.modal-form-check-deck{
+  display: flex;
+  align-items: center;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.04em;
+color: #757575;
+margin-top: 16px;
+margin-bottom: 24px;
+}
+.privacy-policy{
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.04em;
+color: #4D5AE5;
 }
 .modal-form-check-deck::before{
   content: '';
@@ -311,21 +330,52 @@ border-color: rgba(77, 90, 229, 1);
   height: 18px;
   background-position: center;
   background-repeat: no-repeat;
-  
+  margin-right: 8px;
 }
 .modal-form-check:checked + .modal-form-check-deck::before {
  
   background-color: rgba(77, 90, 229, 1);
   background-image:url(../images/Vector.svg);
   border: 1.25px solid #4D5AE5;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
-.modal-form-check:focus + .modal-form-check-deck::before{
+/* .modal-form-check:focus + .modal-form-check-deck::before{
   background-color: rgba(77, 90, 229, 1);
   background-image:url(../images/Vector.svg);
   border: 1.25px solid #4D5AE5;
+  
+} */
+.modal-form-submit {
+    font-family: inherit;
+    width: 170px;
+    align-self: center;
+    font-weight: 500;
+     font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    padding: 16px 34px;
+    text-align: center;
+     border: 1px solid transparent;
+    color: var(--secondary-color);
+    background-color: var(--primery-band-color);
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
+.modal-form-submit:focus,
+.modal-form-submit:hover{
+background-color: var(--primery-band-color);
+/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
 }
+
+.modal-form-submit :active{
+  background:var(--activ-but-color);
+}
+
 /*--------------- main --------------*/
 .section{
    
@@ -663,7 +713,63 @@ background-color:#31D0AA;
 background-color:#31D0AA;
 
 }
+/* ===============footer form=========  */
+.footer-subs{
+  margin-left: 80px;
+}
+ .footer-text-sub{
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.02em;
+color: var(--secondary-color);
+margin-bottom: 16px;
+ }
+ .footer-form-sub{
+  display: flex;
+ }
+.footer-form-input{
+  width: 264px;
+  height: 40px;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 16px 8px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.footer-form-submit-subs{
+    display: flex;
+    font-family: inherit;
+    width: 168px;
+    height: 40px;
+    align-self: center;
+    font-weight: 500;
+    gap: 16px;
+     font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.04em;
+    margin-left: 24px;
+    border-radius: 4px;
+    padding: 8px 24px;
+    text-align: center;
+     border: 1px solid transparent;
+    color: var(--secondary-color);
+    background-color: var(--primery-band-color);
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
+.footer-form-submit-subs:focus,
+.footer-form-submit-subs:hover{
+background-color: var(--primery-band-color);
+/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+}
+
+.footer-form-submit-subs :active{
+  background:var(--activ-but-color);
+}
 /* ==================Portdolio=============== */
 /* main */
 .portfolio{
